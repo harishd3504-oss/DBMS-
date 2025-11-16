@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1fa2ff, #12d8fa, #a6ffcb);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h2 {
+    color: #fff;
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+    animation: fadeTitle 1s ease forwards;
+}
+
+@keyframes fadeTitle {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+    width: 100%;
+    max-width: 430px;
+    margin-top: 30px;
+    padding: 30px 40px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #222;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #ffffff80;
+    background: rgba(255,255,255,0.75);
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #005bea;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,91,234,0.4);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff0844, #ffb199);
+    color: white;
+    transition: 0.3s;
+    animation: buttonPop 1s ease forwards;
+}
+
+@keyframes buttonPop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.table-container {
+    width: 95%;
+    max-width: 750px;
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+tbody tr {
+    background: rgba(255,255,255,0.85);
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #d8ecff;
+    transform: scale(1.01);
+}
+
+tbody td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff70;
+    font-weight: 500;
+}
+
+/* delete button inside table */
+.table-container a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.table-container a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.3);
+}
